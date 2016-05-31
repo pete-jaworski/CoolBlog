@@ -3,7 +3,7 @@
     <body>
 
         <referenceContainer name="content">
-            <block class="PiotrJaworski\CoolBlog\Block\PostList" name="blog.list" template="PiotrJaworski_CoolBlog::list.phtml" />
+            <block class="PiotrJaworski\CoolBlog\Block\PostList" template="PiotrJaworski_CoolBlog::list.phtml" name="blog.list" />
         </referenceContainer> 
         
     </body>

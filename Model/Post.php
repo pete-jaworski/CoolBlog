@@ -2,10 +2,12 @@
 namespace PiotrJaworski\CoolBlog\Model;
 
 use PiotrJaworski\CoolBlog\Api\Data\PostInterface;
+use PiotrJaworski\CoolBlog\Api\PostRepositoryInterface;
+
 use \Magento\Framework\DataObject\IdentityInterface;
  
 
-class Post  extends \Magento\Framework\Model\AbstractModel implements PostInterface, IdentityInterface  {
+class Post  extends \Magento\Framework\Model\AbstractModel implements PostInterface, IdentityInterface   {
 
     /**#@+
      * Post's Statuses
@@ -41,6 +43,7 @@ class Post  extends \Magento\Framework\Model\AbstractModel implements PostInterf
         $this->_init('PiotrJaworski\CoolBlog\Model\ResourceModel\Post');
     }
 
+    
     /**
      * Check if post url key exists
      * return post id if post exists
@@ -220,5 +223,9 @@ class Post  extends \Magento\Framework\Model\AbstractModel implements PostInterf
         return $this->setData(self::IS_ACTIVE, $is_active);
     }
     
+ 
+    public function getList($param) {
+        return null;
+    }
     
 }
